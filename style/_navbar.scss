@@ -1,0 +1,54 @@
+.navbar {
+    background-color: $green-light !important;
+    padding: 25px 0;
+
+    @include media-breakpoint-down(md) {
+        padding: 17px 0;
+    }
+
+    img {
+        max-width: 35px;
+    }
+
+    .brand-name {
+        color: $green-primary;
+        font-weight: map-get($font-weights, bold);
+        font-size: 1.5rem;
+    }
+
+    .navbar-nav {
+        .nav-link {
+            color: $black;
+            font-weight: map-get($font-weights, bold);
+            font-size: 1.2rem;
+
+            &:hover {
+                color: $orange-primary;
+            }
+
+            &.active {
+                color: $green-primary;
+            }
+        }
+    }
+    .navbar-auth {
+        .nav-link {
+            color: $black;
+            font-weight: map-get($font-weights, bold);
+            font-size: 1.2rem;
+
+            &:hover {
+                color: $orange-primary;
+            }
+        }
+    }
+
+    &.scrolled {
+        padding: 10px 0;
+        box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.07);
+
+        img {
+            max-width: 32px;
+        }
+    }
+}

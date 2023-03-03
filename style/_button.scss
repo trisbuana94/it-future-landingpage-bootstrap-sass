@@ -1,0 +1,38 @@
+@import "fonts";
+@import "colors";
+
+.btn-master {
+    padding: 8px 25px;
+    border-radius: 10px;
+    font-weight: map-get($font-weights, medium);
+    font-size: 1.2rem;
+
+    @include media-breakpoint-down(sm) {
+        padding: 5px 15px;
+    }
+}
+
+.btn-first {
+    @extend .btn-master;
+    color: #fff !important;
+    background-color: $orange-primary;
+    border: 2px solid $orange-primary;
+
+    &:hover {
+        background-color: $orange-dark;
+        color: rgb(213, 213, 213);
+        border: 2px solid rgba(247, 110, 17, 0.1);
+    }
+}
+
+.btn-second {
+    @extend .btn-master;
+    color: $orange-primary;
+    border: 2px solid $orange-primary;
+
+    &:hover {
+        color: #fff;
+        background-color: $orange-primary;
+        border: 2px solid rgba(247, 110, 17, 0.1);
+    }
+}

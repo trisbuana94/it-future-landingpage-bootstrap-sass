@@ -1,0 +1,325 @@
+@import "fonts";
+@import "colors";
+
+* {
+    font-family: "Nunito", sans-serif;
+    list-style: none;
+    text-decoration: none !important;
+    transition: 0.3s ease-in-out all;
+}
+
+html {
+    @include media-breakpoint-down(xxl) {
+        font-size: 77%;
+    }
+    @include media-breakpoint-down(lg) {
+        font-size: 72%;
+    }
+    @include media-breakpoint-down(md) {
+        font-size: 67%;
+    }
+    @include media-breakpoint-down(sm) {
+        font-size: 62%;
+    }
+}
+
+.container-fluid {
+    padding: 0 5%;
+}
+
+// home
+.home {
+    background-color: $green-light;
+    padding: 130px 0 90px 0;
+
+    .home-thumbnail {
+        max-width: 550px;
+
+        @include media-breakpoint-down(xxl) {
+            max-width: 450px;
+        }
+        @include media-breakpoint-down(lg) {
+            max-width: 350px;
+        }
+        @include media-breakpoint-down(md) {
+            max-width: 250px;
+        }
+    }
+
+    .heading-home {
+        font-weight: map-get($font-weights, bold);
+        font-size: 3rem;
+        color: $black;
+
+        .prod {
+            color: $green-primary;
+        }
+        .prof {
+            color: $orange-primary;
+        }
+    }
+    .subheading-home {
+        margin-top: 30px;
+        font-weight: map-get($font-weights, light);
+        color: $black;
+        font-size: 1.4rem;
+    }
+
+    .btn-home {
+        margin-top: 100px;
+        @include media-breakpoint-down(xxl) {
+            margin-top: 75px;
+        }
+        @include media-breakpoint-down(md) {
+            margin-top: 62px;
+        }
+        @include media-breakpoint-down(sm) {
+            margin-top: 55px;
+        }
+    }
+}
+
+// about, partner, category, product, testimoni, cta, footer
+.margin-section {
+    margin-top: 150px;
+
+    @include media-breakpoint-down(md) {
+        margin-top: 100px;
+    }
+}
+
+// about, cta
+.heading-section {
+    font-weight: map-get($font-weights, medium);
+    font-size: 2.3rem;
+    color: $black-primary;
+}
+.subheading-section {
+    font-weight: map-get($font-weights, light);
+    font-size: 1.25rem;
+}
+.about-img,
+.started-img {
+    max-width: 500px;
+
+    @include media-breakpoint-down(xxl) {
+        max-width: 400px;
+    }
+    @include media-breakpoint-down(lg) {
+        max-width: 300px;
+    }
+    @include media-breakpoint-down(md) {
+        max-width: 230px;
+    }
+}
+
+// partner, category, product, testimoni
+.label-section {
+    font-weight: map-get($font-weights, medium);
+    font-size: 1.9rem;
+    color: $black-primary;
+}
+
+// partner
+.partner-img {
+    max-width: 7rem;
+
+    @include media-breakpoint-down(xxl) {
+        max-width: 77%;
+    }
+    @include media-breakpoint-down(lg) {
+        max-width: 72%;
+    }
+    @include media-breakpoint-down(md) {
+        max-width: 67%;
+    }
+    @include media-breakpoint-down(sm) {
+        max-width: 62%;
+    }
+}
+
+// category
+.category {
+    i {
+        font-size: 3.2rem;
+        color: $green-primary;
+    }
+    .card {
+        border: 3px solid $green-primary;
+        border-radius: 8px !important;
+        img {
+            max-width: 80px;
+
+            @include media-breakpoint-down(md) {
+                max-width: 67px;
+            }
+            @include media-breakpoint-down(sm) {
+                max-width: 58px;
+            }
+        }
+        padding: 46px 35px;
+
+        .caption {
+            h3 {
+                font-weight: map-get($font-weights, bold);
+                font-size: 1.3rem;
+                color: $green-primary;
+            }
+        }
+
+        &:hover {
+            background-color: $green-primary;
+
+            .caption {
+                h3,
+                p {
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
+
+// product
+.product {
+    i {
+        font-size: 3.2rem;
+        color: $green-primary;
+    }
+    .card {
+        border: none;
+
+        .title-class {
+            font-weight: map-get($font-weights, medium);
+            font-size: 1.3rem;
+        }
+        .category-name {
+            background-color: $green-light;
+        }
+        .price {
+            font-weight: map-get($font-weights, bold);
+            font-size: 1.5rem;
+            color: $green-primary;
+        }
+        .rate {
+            i {
+                font-size: 1.9rem;
+                color: #ebef17;
+            }
+        }
+        .thumbnail {
+            max-width: 430px;
+            max-height: 290px;
+            overflow: hidden;
+            border-radius: 10px;
+
+            .caption-img {
+                bottom: 20px;
+                left: 20px;
+            }
+            img {
+                &:hover {
+                    transform: scale(1.1);
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+}
+
+// testimoni
+.testi {
+    background-color: $green-light;
+    padding: 80px 0;
+
+    .card {
+        background-color: $green-primary;
+        padding: 30px;
+        border: none;
+        border-radius: 10px;
+
+        .rate {
+            i {
+                font-size: 1.25rem;
+                color: #ebef17;
+            }
+        }
+        .detail {
+            i {
+                font-size: 3.14rem;
+                color: $green-light;
+            }
+            .person-img {
+                max-width: 60px;
+
+                @include media-breakpoint-down(xxl) {
+                    max-width: 50px;
+                }
+                @include media-breakpoint-down(lg) {
+                    max-width: 40px;
+                }
+            }
+        }
+    }
+}
+
+// footer
+.footer {
+    background-color: $green-primary;
+    padding-top: 60px;
+    border-radius: 50px 50px 0px 0px;
+    @include media-breakpoint-down(md) {
+        border-radius: 30px 30px 0px 0px;
+    }
+
+    .row-content {
+        padding-bottom: 80px;
+    }
+
+    .logo-footer {
+        max-width: 35px;
+
+        @include media-breakpoint-down(md) {
+            max-width: 32px;
+        }
+    }
+    .logo-name {
+        color: $green-light;
+        font-weight: map-get($font-weights, bold);
+        font-size: 1.5rem;
+    }
+
+    .payment-img {
+        max-height: 24px;
+
+        @include media-breakpoint-down(md) {
+            max-height: 20px;
+        }
+        @include media-breakpoint-down(sm) {
+            max-height: 17px;
+        }
+    }
+    .icons {
+        i {
+            font-size: 3.2rem;
+            color: #fff;
+
+            &:hover {
+                color: $orange-primary;
+            }
+        }
+    }
+    h3 {
+        font-weight: map-get($font-weights, bold);
+        font-size: 1.6rem;
+        margin-bottom: 30px;
+        color: $green-light;
+    }
+    ul {
+        padding: 0;
+        li {
+            color: #fff;
+            margin-top: 20px;
+        }
+    }
+}
